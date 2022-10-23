@@ -46,7 +46,7 @@ def classify_subimage(img, spot):
     global useImgs
     print('finding subimage')
     subimage = find_subimage(img, spot)
-    cv2.imwrite('./totest/' + str(random.randint(0, 100000)) + '.jpg', subimage)
+    # subimage = tf.keras.utils.normalize(subimage, axis = 1)
     return model.predict(np.array([subimage]), verbose=0)
 
 def process(img):
