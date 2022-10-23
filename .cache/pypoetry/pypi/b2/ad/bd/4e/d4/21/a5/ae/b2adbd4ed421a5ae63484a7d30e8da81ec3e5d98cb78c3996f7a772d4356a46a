@@ -1,0 +1,1 @@
+9999999999{"name": "h5py", "version": "3.7.0", "summary": "Read and write HDF5 files from Python", "platform": null, "requires_dist": ["numpy (>=1.14.5)"], "requires_python": ">=3.7", "files": [], "_cache_version": "1.0.0"}

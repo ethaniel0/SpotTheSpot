@@ -1,0 +1,1 @@
+9999999999{"name": "google-pasta", "version": "0.2.0", "summary": "pasta is an AST-based Python refactoring library", "platform": "", "requires_dist": ["six"], "requires_python": "", "files": [], "_cache_version": "1.0.0"}

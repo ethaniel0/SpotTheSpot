@@ -1,0 +1,1 @@
+9999999999{"name": "google-auth-oauthlib", "version": "0.4.6", "summary": "Google Authentication Library", "platform": "", "requires_dist": ["google-auth (>=1.0.0)", "requests-oauthlib (>=0.7.0)", "click (>=6.0.0) ; extra == 'tool'"], "requires_python": ">=3.6", "files": [], "_cache_version": "1.0.0"}

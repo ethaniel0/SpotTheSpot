@@ -1,0 +1,1 @@
+9999999999{"name": "termcolor", "version": "2.0.1", "summary": "ANSI color formatting for output in terminal", "platform": null, "requires_dist": ["pytest-cov; extra == 'tests'", "pytest; extra == 'tests'"], "requires_python": ">=3.7", "files": [], "_cache_version": "1.0.0"}
