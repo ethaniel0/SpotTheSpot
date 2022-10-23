@@ -9,6 +9,8 @@ spots = []
 
 model = tf.keras.models.load_model("LotNeuralNetwork.model")
 
+useImgs = True
+
 def define_spots():
     top_left = (75,85)
     spot_width = 170
@@ -40,16 +42,19 @@ def find_subimage(img, spot):
     im = img[y:y+h, x:x+w]
     return cv2.resize(im, (IMG_SIZE, IMG_SIZE))
 
-def classify_subimage(img, spot, num):
+def classify_subimage(img, spot):
+    global useImgs
+    print('finding subimage')
     subimage = find_subimage(img, spot)
+    cv2.imwrite('./totest/' + str(random.randint(0, 100000)) + '.jpg', subimage)
     return model.predict(np.array([subimage]), verbose=0)
 
 def process(img):
-    global spots
+    global spots, useImgs
     define_spots()
     num = 0
     for spot in spots:
-        classification = classify_subimage(img, spot, num)[0]
+        classification = classify_subimage(img, spot)[0]
         num += 1
         print(classification)
         if classification[0] < classification[1]:
@@ -58,5 +63,6 @@ def process(img):
             cv2.polylines(img, [spot], True, (255, 255, 255), 2)
     
     spots = []
+    useImgs = True
 
     return img
